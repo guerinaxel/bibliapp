@@ -1,0 +1,49 @@
+{% extends "main.html.twig" %}
+{% block content %}
+
+{% if message != "" %}
+		<div class="alert alert-success">{{message}}</div>
+	{% endif %}
+
+<section>
+
+	<h1>Ajouter un livre</h1>
+	<form method="post" enctype="multipart/form-data" action="{{url_base}}admin/ajout">
+	<div class="col-md-5">
+		<fieldset>
+			<legend>Informations</legend>
+			<input type="text" id="isbn" name="isbn" value="" autocomplete="off" placeholder="ISBN" required></input>
+			<a href="#" id="rechercheInternet">Chercher sur internet</a><br/>
+			<input type="text" id="titre" name="titre" value="" autocomplete="off" placeholder="Titre" required></input><br/>
+			<input type="text" id="auteur" name="auteur" value="" autocomplete="off" placeholder="Auteur"></input><br/>
+			<input type="text" name="edition" value="" autocomplete="off" placeholder="Edition"></input><br/>
+			<input type="text" id="langue" name="langue" value="" autocomplete="off" placeholder="Langue"></input><br/>
+			<input type="text" id="publication" name="publication" value="" autocomplete="off" placeholder="Publication"></input><br/>
+			<input type="text" name="mots" value="" autocomplete="off" placeholder="Mots-clés"></input> (ex : exercice,entrainement,leçon)<br/>
+			<input type="hidden"  name="login"  value="{{user[0].nom}}"><br/>
+			<label>Discipline</label>
+			<select name="discipline">
+				{% for it in disciplines %}
+					<option value="{{it.idDiscipline}}">{{it.nom}}</option>
+				{% endfor %}
+			</select>
+		</fieldset>
+	</div>
+	<div class="col-md-7">
+		<fieldset>
+			<legend>Résumé</legend>
+			<textarea id="description" name="resume">
+			</textarea>
+		</fieldset>
+	
+		<fieldset>
+			<legend>Couverture</legend>
+			<label>Importer une image (.jpg, .jpeg ou .gif)</label><input id="fichier" type="file" name="fichier"><br/>
+		</fieldset>
+	
+		<button>Enregistrer le document</button>
+	</div>
+	</form>
+</section>
+
+{% endblock %}

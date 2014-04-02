@@ -1,0 +1,49 @@
+{% extends "main.html.twig" %}
+{% block content %}
+<div class="starter-template col-md-12">
+<h1>Mes coordonnées</h1>
+Login : {{user[0].nom}}<br/>
+Nom : {{user[0].prenom}}<br/>
+E-mail actuel : {{user[0].mail}}<br/>
+
+<form method="post" action="{{url_base}}user/email">
+	<label>Changer mon e-mail</label>
+	<input type="email" name="email" value="" autocomplete="off" placeholder="Nouvel email"></input>
+	<input type="submit" value="Changer mon mail"></input>
+</form>
+
+<h1>Liste des emprunts</h1>
+<br/>
+{% if livre|length > 0 %}
+<table class="table">
+	<tr>
+		<th >Titre</th>
+		<th >ISBN</th> 
+		<th> Discipline </th>
+		<th >Date d'emprunt</th>
+		<th>Retour du livre</th>
+	</tr>
+	 
+		{% for i in range(0, emprunts|length -1) %}		
+
+					<tr>
+						<td>{{livre[i][0].titre}}</td>
+						<td>{{livre[i][0].isbn}}</td> 
+						<td>{{discipline[i][0].nom}}</td> 
+						<td>{{emprunts[i].dateEmprunt}}</td> 					
+						<td>
+							<form method="post" action="{{url_base}}retour/{{livre[i][0].idLivre}}">
+								<input type="submit" value="Rendre" class="btn btn-primary"></input>
+							</form>
+						</td>		
+				</div>
+				
+		{% endfor %}
+	
+</table>
+{% else %}
+	<h3> Aucun emprunt n'a été trouvé.</h3>
+	{% endif %}
+</div>
+
+{% endblock %}

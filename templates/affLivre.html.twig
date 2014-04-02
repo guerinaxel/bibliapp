@@ -1,0 +1,29 @@
+{% if livre|length > 0 %} 	
+	{% for i in range(0, livre|length-1) %}
+	<article>
+		<div class="col-md-6 col-xs-12 panel height">
+			<div class="col-md-4 col-xs-4">
+				<a href="{{url_base}}livre/id={{livre[i].idLivre}}"><img src="../upload/{{livre[i].couverture}}" class=" thumbnail img-responsive"/> </a>
+			</div>
+		
+			<div class="col-md-4">
+				<h5><a href="{{url_base}}livre/id={{livre[i].idLivre}}"> {{livre[i].titre}} </a></h5><br>
+				<h5><a href="{{url_base}}rechercheAv?discipline={{livre[i]['discipline'].idDiscipline}}&tri=1">{{livre[i]['discipline'].nom}}</a></h5>	
+				{% if dispo[i] == "null" %}
+				<form method="post" action="{{url_base}}emprunt/{{livre[i].idLivre}}">
+					<input type="submit" value="Emprunter" class="btn btn-success"></input>
+				</form>
+				{% elseif dispo[i].idUser != idUser %}					
+				<button id='indisponible' class="btn btn-danger">Indisponible</button>
+				{% else %}
+				<form method="post" action="{{url_base}}retour/{{livre[i].idLivre}}">
+					<input type="submit" value="Rendre" class="btn btn-primary"></input>
+				</form>
+				{% endif %}
+			</div>
+		</div>
+	</article>
+	{% endfor %}
+	{% else %}
+	<h3> Aucun livre n'a été trouvé.</h3>
+	{% endif %}

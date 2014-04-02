@@ -1,0 +1,700 @@
+8C0B .START phpCAS-1.3.2 ****************** [CAS.php:450]
+8C0B .=> phpCAS::client('2.0', 'univ-lorraine.fr', 443, '/cas') [phpCas.php:26]
+8C0B .|    => CAS_Client::__construct('2.0', false, 'univ-lorraine.fr', 443, '/cas', true) [CAS.php:347]
+8C0B .|    |    Starting a new session [Client.php:792]
+8C0B .|    <= ''
+8C0B .<= ''
+8C0B .=> phpCAS::setNoCasServerValidation() [phpCas.php:35]
+8C0B .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+8C0B .<= ''
+8C0B .=> phpCAS::forceAuthentication() [phpCas.php:38]
+8C0B .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+8C0B .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+8C0B .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+8C0B .|    |    |    |    no user found [Client.php:1375]
+8C0B .|    |    |    <= false
+8C0B .|    |    |    no ticket found [Client.php:1258]
+8C0B .|    |    <= false
+8C0B .|    |    => CAS_Client::redirectToCas(false) [Client.php:1092]
+8C0B .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1396]
+8C0B .|    |    |    |    => CAS_Client::getURL() [Client.php:328]
+8C0B .|    |    |    |    |    Final URI: http://127.0.0.1:82/Test_Cas/phpCas.php [Client.php:3071]
+8C0B .|    |    |    |    <= 'http://127.0.0.1:82/Test_Cas/phpCas.php'
+8C0B .|    |    |    <= 'https://univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_Cas%2FphpCas.php'
+8C0B .|    |    |    Redirect to : https://univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_Cas%2FphpCas.php [Client.php:1402]
+8C0B .|    |    |    exit()
+8C0B .|    |    |    -
+8C0B .|    |    -
+8C0B .|    -
+DDB8 .START phpCAS-1.3.2 ****************** [CAS.php:450]
+DDB8 .=> phpCAS::client('2.0', 'univ-lorraine.fr', 443, '/cas') [phpCas.php:26]
+DDB8 .|    => CAS_Client::__construct('2.0', false, 'univ-lorraine.fr', 443, '/cas', true) [CAS.php:347]
+DDB8 .|    |    Starting a new session [Client.php:792]
+DDB8 .|    <= ''
+DDB8 .<= ''
+DDB8 .=> phpCAS::setNoCasServerValidation() [phpCas.php:35]
+DDB8 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+DDB8 .<= ''
+DDB8 .=> phpCAS::forceAuthentication() [phpCas.php:38]
+DDB8 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+DDB8 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+DDB8 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+DDB8 .|    |    |    |    no user found [Client.php:1375]
+DDB8 .|    |    |    <= false
+DDB8 .|    |    |    no ticket found [Client.php:1258]
+DDB8 .|    |    <= false
+DDB8 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1092]
+DDB8 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1396]
+DDB8 .|    |    |    |    => CAS_Client::getURL() [Client.php:328]
+DDB8 .|    |    |    |    |    Final URI: http://127.0.0.1:82/Test_Cas/phpCas.php [Client.php:3071]
+DDB8 .|    |    |    |    <= 'http://127.0.0.1:82/Test_Cas/phpCas.php'
+DDB8 .|    |    |    <= 'https://univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_Cas%2FphpCas.php'
+DDB8 .|    |    |    Redirect to : https://univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_Cas%2FphpCas.php [Client.php:1402]
+DDB8 .|    |    |    exit()
+DDB8 .|    |    |    -
+DDB8 .|    |    -
+DDB8 .|    -
+2457 .START phpCAS-1.3.2 ****************** [CAS.php:450]
+2457 .=> phpCAS::client('2.0', 'univ-lorraine.fr', 443, '/cas') [phpCas.php:26]
+2457 .|    => CAS_Client::__construct('2.0', false, 'univ-lorraine.fr', 443, '/cas', true) [CAS.php:347]
+2457 .|    |    Starting a new session [Client.php:792]
+2457 .|    <= ''
+2457 .<= ''
+2457 .=> phpCAS::setNoCasServerValidation() [phpCas.php:35]
+2457 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+2457 .<= ''
+2457 .=> phpCAS::forceAuthentication() [phpCas.php:38]
+2457 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+2457 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+2457 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+2457 .|    |    |    |    no user found [Client.php:1375]
+2457 .|    |    |    <= false
+2457 .|    |    |    no ticket found [Client.php:1258]
+2457 .|    |    <= false
+2457 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1092]
+2457 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1396]
+2457 .|    |    |    |    => CAS_Client::getURL() [Client.php:328]
+2457 .|    |    |    |    |    Final URI: http://127.0.0.1:82/Test_Cas/phpCas.php [Client.php:3071]
+2457 .|    |    |    |    <= 'http://127.0.0.1:82/Test_Cas/phpCas.php'
+2457 .|    |    |    <= 'https://univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_Cas%2FphpCas.php'
+2457 .|    |    |    Redirect to : https://univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_Cas%2FphpCas.php [Client.php:1402]
+2457 .|    |    |    exit()
+2457 .|    |    |    -
+2457 .|    |    -
+2457 .|    -
+868B .START phpCAS-1.3.2 ****************** [CAS.php:450]
+868B .=> phpCAS::client('2.0', 'univ-lorraine.fr', 443, '/cas') [phpCas.php:26]
+868B .|    => CAS_Client::__construct('2.0', false, 'univ-lorraine.fr', 443, '/cas', true) [CAS.php:347]
+868B .|    |    Starting a new session [Client.php:792]
+868B .|    <= ''
+868B .<= ''
+868B .=> phpCAS::setNoCasServerValidation() [phpCas.php:35]
+868B .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+868B .<= ''
+868B .=> phpCAS::forceAuthentication() [phpCas.php:38]
+868B .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+868B .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+868B .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+868B .|    |    |    |    no user found [Client.php:1375]
+868B .|    |    |    <= false
+868B .|    |    |    no ticket found [Client.php:1258]
+868B .|    |    <= false
+868B .|    |    => CAS_Client::redirectToCas(false) [Client.php:1092]
+868B .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1396]
+868B .|    |    |    |    => CAS_Client::getURL() [Client.php:328]
+868B .|    |    |    |    |    Final URI: http://127.0.0.1:82/Test_Cas/phpCas.php [Client.php:3071]
+868B .|    |    |    |    <= 'http://127.0.0.1:82/Test_Cas/phpCas.php'
+868B .|    |    |    <= 'https://univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_Cas%2FphpCas.php'
+868B .|    |    |    Redirect to : https://univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_Cas%2FphpCas.php [Client.php:1402]
+868B .|    |    |    exit()
+868B .|    |    |    -
+868B .|    |    -
+868B .|    -
+112A .START phpCAS-1.3.2 ****************** [CAS.php:450]
+112A .=> phpCAS::client('2.0', 'univ-lorraine.fr', 443, '') [phpCas.php:26]
+112A .|    => CAS_Client::__construct('2.0', false, 'univ-lorraine.fr', 443, '', true) [CAS.php:347]
+112A .|    |    Starting a new session [Client.php:792]
+112A .|    <= ''
+112A .<= ''
+112A .=> phpCAS::setNoCasServerValidation() [phpCas.php:35]
+112A .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+112A .<= ''
+112A .=> phpCAS::forceAuthentication() [phpCas.php:38]
+112A .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+112A .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+112A .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+112A .|    |    |    |    no user found [Client.php:1375]
+112A .|    |    |    <= false
+112A .|    |    |    no ticket found [Client.php:1258]
+112A .|    |    <= false
+112A .|    |    => CAS_Client::redirectToCas(false) [Client.php:1092]
+112A .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1396]
+112A .|    |    |    |    => CAS_Client::getURL() [Client.php:328]
+112A .|    |    |    |    |    Final URI: http://127.0.0.1:82/Test_Cas/phpCas.php [Client.php:3071]
+112A .|    |    |    |    <= 'http://127.0.0.1:82/Test_Cas/phpCas.php'
+112A .|    |    |    <= 'https://univ-lorraine.fr/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_Cas%2FphpCas.php'
+112A .|    |    |    Redirect to : https://univ-lorraine.fr/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_Cas%2FphpCas.php [Client.php:1402]
+112A .|    |    |    exit()
+112A .|    |    |    -
+112A .|    |    -
+112A .|    -
+C49F .START phpCAS-1.3.2 ****************** [CAS.php:450]
+C49F .=> phpCAS::client('2.0', 'univ-lorraine.fr', 443, 'cas') [phpCas.php:26]
+C49F .|    => CAS_Client::__construct('2.0', false, 'univ-lorraine.fr', 443, 'cas', true) [CAS.php:347]
+C49F .|    |    Starting a new session [Client.php:792]
+C49F .|    <= ''
+C49F .<= ''
+C49F .=> phpCAS::setNoCasServerValidation() [phpCas.php:35]
+C49F .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+C49F .<= ''
+C49F .=> phpCAS::forceAuthentication() [phpCas.php:38]
+C49F .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+C49F .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+C49F .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+C49F .|    |    |    |    no user found [Client.php:1375]
+C49F .|    |    |    <= false
+C49F .|    |    |    no ticket found [Client.php:1258]
+C49F .|    |    <= false
+C49F .|    |    => CAS_Client::redirectToCas(false) [Client.php:1092]
+C49F .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1396]
+C49F .|    |    |    |    => CAS_Client::getURL() [Client.php:328]
+C49F .|    |    |    |    |    Final URI: http://127.0.0.1:82/Test_Cas/phpCas.php [Client.php:3071]
+C49F .|    |    |    |    <= 'http://127.0.0.1:82/Test_Cas/phpCas.php'
+C49F .|    |    |    <= 'https://univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_Cas%2FphpCas.php'
+C49F .|    |    |    Redirect to : https://univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_Cas%2FphpCas.php [Client.php:1402]
+C49F .|    |    |    exit()
+C49F .|    |    |    -
+C49F .|    |    -
+C49F .|    -
+2C11 .START phpCAS-1.3.2 ****************** [CAS.php:450]
+2C11 .=> phpCAS::client('2.0', 'univ-lorraine.fr', 443, '/cas') [phpCas.php:26]
+2C11 .|    => CAS_Client::__construct('2.0', false, 'univ-lorraine.fr', 443, '/cas', true) [CAS.php:347]
+2C11 .|    |    Starting a new session [Client.php:792]
+2C11 .|    <= ''
+2C11 .<= ''
+2C11 .=> phpCAS::setNoCasServerValidation() [phpCas.php:35]
+2C11 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+2C11 .<= ''
+2C11 .=> phpCAS::forceAuthentication() [phpCas.php:38]
+2C11 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+2C11 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+2C11 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+2C11 .|    |    |    |    no user found [Client.php:1375]
+2C11 .|    |    |    <= false
+2C11 .|    |    |    no ticket found [Client.php:1258]
+2C11 .|    |    <= false
+2C11 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1092]
+2C11 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1396]
+2C11 .|    |    |    |    => CAS_Client::getURL() [Client.php:328]
+2C11 .|    |    |    |    |    Final URI: http://127.0.0.1:82/Test_Cas/phpCas.php [Client.php:3071]
+2C11 .|    |    |    |    <= 'http://127.0.0.1:82/Test_Cas/phpCas.php'
+2C11 .|    |    |    <= 'https://univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_Cas%2FphpCas.php'
+2C11 .|    |    |    Redirect to : https://univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_Cas%2FphpCas.php [Client.php:1402]
+2C11 .|    |    |    exit()
+2C11 .|    |    |    -
+2C11 .|    |    -
+2C11 .|    -
+A0C4 .START phpCAS-1.3.2 ****************** [CAS.php:450]
+A0C4 .=> phpCAS::client('2.0', 'univ-lorraine.fr', 443, '/') [phpCas.php:26]
+A0C4 .|    => CAS_Client::__construct('2.0', false, 'univ-lorraine.fr', 443, '/', true) [CAS.php:347]
+A0C4 .|    |    Starting a new session [Client.php:792]
+A0C4 .|    <= ''
+A0C4 .<= ''
+A0C4 .=> phpCAS::setNoCasServerValidation() [phpCas.php:35]
+A0C4 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+A0C4 .<= ''
+A0C4 .=> phpCAS::forceAuthentication() [phpCas.php:38]
+A0C4 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+A0C4 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+A0C4 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+A0C4 .|    |    |    |    no user found [Client.php:1375]
+A0C4 .|    |    |    <= false
+A0C4 .|    |    |    no ticket found [Client.php:1258]
+A0C4 .|    |    <= false
+A0C4 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1092]
+A0C4 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1396]
+A0C4 .|    |    |    |    => CAS_Client::getURL() [Client.php:328]
+A0C4 .|    |    |    |    |    Final URI: http://127.0.0.1:82/Test_Cas/phpCas.php [Client.php:3071]
+A0C4 .|    |    |    |    <= 'http://127.0.0.1:82/Test_Cas/phpCas.php'
+A0C4 .|    |    |    <= 'https://univ-lorraine.fr//login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_Cas%2FphpCas.php'
+A0C4 .|    |    |    Redirect to : https://univ-lorraine.fr//login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_Cas%2FphpCas.php [Client.php:1402]
+A0C4 .|    |    |    exit()
+A0C4 .|    |    |    -
+A0C4 .|    |    -
+A0C4 .|    -
+8D82 .START phpCAS-1.3.2 ****************** [CAS.php:450]
+8D82 .=> phpCAS::client('2.0', 'univ-lorraine.fr', 443, '') [phpCas.php:26]
+8D82 .|    => CAS_Client::__construct('2.0', false, 'univ-lorraine.fr', 443, '', true) [CAS.php:347]
+8D82 .|    |    Starting a new session [Client.php:792]
+8D82 .|    <= ''
+8D82 .<= ''
+8D82 .=> phpCAS::setNoCasServerValidation() [phpCas.php:35]
+8D82 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+8D82 .<= ''
+8D82 .=> phpCAS::forceAuthentication() [phpCas.php:38]
+8D82 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+8D82 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+8D82 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+8D82 .|    |    |    |    no user found [Client.php:1375]
+8D82 .|    |    |    <= false
+8D82 .|    |    |    no ticket found [Client.php:1258]
+8D82 .|    |    <= false
+8D82 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1092]
+8D82 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1396]
+8D82 .|    |    |    |    => CAS_Client::getURL() [Client.php:328]
+8D82 .|    |    |    |    |    Final URI: http://127.0.0.1:82/Test_Cas/phpCas.php [Client.php:3071]
+8D82 .|    |    |    |    <= 'http://127.0.0.1:82/Test_Cas/phpCas.php'
+8D82 .|    |    |    <= 'https://univ-lorraine.fr/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_Cas%2FphpCas.php'
+8D82 .|    |    |    Redirect to : https://univ-lorraine.fr/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_Cas%2FphpCas.php [Client.php:1402]
+8D82 .|    |    |    exit()
+8D82 .|    |    |    -
+8D82 .|    |    -
+8D82 .|    -
+D08C .START phpCAS-1.3.2 ****************** [CAS.php:450]
+D08C .=> phpCAS::client('2.0', 'univ-lorraine.fr', 443, '/cas') [phpCas.php:26]
+D08C .|    => CAS_Client::__construct('2.0', false, 'univ-lorraine.fr', 443, '/cas', true) [CAS.php:347]
+D08C .|    |    Starting a new session [Client.php:792]
+D08C .|    <= ''
+D08C .<= ''
+D08C .=> phpCAS::setNoCasServerValidation() [phpCas.php:35]
+D08C .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+D08C .<= ''
+D08C .=> phpCAS::forceAuthentication() [phpCas.php:38]
+D08C .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+D08C .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+D08C .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+D08C .|    |    |    |    no user found [Client.php:1375]
+D08C .|    |    |    <= false
+D08C .|    |    |    no ticket found [Client.php:1258]
+D08C .|    |    <= false
+D08C .|    |    => CAS_Client::redirectToCas(false) [Client.php:1092]
+D08C .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1396]
+D08C .|    |    |    |    => CAS_Client::getURL() [Client.php:328]
+D08C .|    |    |    |    |    Final URI: http://127.0.0.1:82/Test_Cas/phpCas.php [Client.php:3071]
+D08C .|    |    |    |    <= 'http://127.0.0.1:82/Test_Cas/phpCas.php'
+D08C .|    |    |    <= 'https://univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_Cas%2FphpCas.php'
+D08C .|    |    |    Redirect to : https://univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_Cas%2FphpCas.php [Client.php:1402]
+D08C .|    |    |    exit()
+D08C .|    |    |    -
+D08C .|    |    -
+D08C .|    -
+C5D1 .START phpCAS-1.3.2 ****************** [CAS.php:450]
+C5D1 .=> phpCAS::client('2.0', 'univ-lorraine.fr', 443, '') [phpCas.php:26]
+C5D1 .|    => CAS_Client::__construct('2.0', false, 'univ-lorraine.fr', 443, '', true) [CAS.php:347]
+C5D1 .|    |    Starting a new session [Client.php:792]
+C5D1 .|    <= ''
+C5D1 .<= ''
+C5D1 .=> phpCAS::setNoCasServerValidation() [phpCas.php:35]
+C5D1 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+C5D1 .<= ''
+C5D1 .=> phpCAS::forceAuthentication() [phpCas.php:38]
+C5D1 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+C5D1 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+C5D1 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+C5D1 .|    |    |    |    no user found [Client.php:1375]
+C5D1 .|    |    |    <= false
+C5D1 .|    |    |    no ticket found [Client.php:1258]
+C5D1 .|    |    <= false
+C5D1 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1092]
+C5D1 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1396]
+C5D1 .|    |    |    |    => CAS_Client::getURL() [Client.php:328]
+C5D1 .|    |    |    |    |    Final URI: http://127.0.0.1:82/Test_Cas/phpCas.php [Client.php:3071]
+C5D1 .|    |    |    |    <= 'http://127.0.0.1:82/Test_Cas/phpCas.php'
+C5D1 .|    |    |    <= 'https://univ-lorraine.fr/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_Cas%2FphpCas.php'
+C5D1 .|    |    |    Redirect to : https://univ-lorraine.fr/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_Cas%2FphpCas.php [Client.php:1402]
+C5D1 .|    |    |    exit()
+C5D1 .|    |    |    -
+C5D1 .|    |    -
+C5D1 .|    -
+C563 .START phpCAS-1.3.2 ****************** [CAS.php:450]
+C563 .=> phpCAS::client('2.0', 'univ-lorraine.fr', 443, '') [phpCas.php:26]
+C563 .|    => CAS_Client::__construct('2.0', false, 'univ-lorraine.fr', 443, '', true) [CAS.php:347]
+C563 .|    |    Starting a new session [Client.php:792]
+C563 .|    <= ''
+C563 .<= ''
+C563 .=> phpCAS::setNoCasServerValidation() [phpCas.php:35]
+C563 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+C563 .<= ''
+C563 .=> phpCAS::forceAuthentication() [phpCas.php:38]
+C563 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+C563 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+C563 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+C563 .|    |    |    |    no user found [Client.php:1375]
+C563 .|    |    |    <= false
+C563 .|    |    |    no ticket found [Client.php:1258]
+C563 .|    |    <= false
+C563 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1092]
+C563 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1396]
+C563 .|    |    |    |    => CAS_Client::getURL() [Client.php:328]
+C563 .|    |    |    |    |    Final URI: http://127.0.0.1:82/Test_Cas/phpCas.php [Client.php:3071]
+C563 .|    |    |    |    <= 'http://127.0.0.1:82/Test_Cas/phpCas.php'
+C563 .|    |    |    <= 'https://univ-lorraine.fr/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_Cas%2FphpCas.php'
+C563 .|    |    |    Redirect to : https://univ-lorraine.fr/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_Cas%2FphpCas.php [Client.php:1402]
+C563 .|    |    |    exit()
+C563 .|    |    |    -
+C563 .|    |    -
+C563 .|    -
+5C95 .START phpCAS-1.3.2 ****************** [CAS.php:450]
+5C95 .=> phpCAS::client('2.0', 'univ-lorraine.fr', 443, '/cas') [phpCas.php:26]
+5C95 .|    => CAS_Client::__construct('2.0', false, 'univ-lorraine.fr', 443, '/cas', true) [CAS.php:347]
+5C95 .|    |    Starting a new session [Client.php:792]
+5C95 .|    <= ''
+5C95 .<= ''
+5C95 .=> phpCAS::setNoCasServerValidation() [phpCas.php:35]
+5C95 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+5C95 .<= ''
+5C95 .=> phpCAS::forceAuthentication() [phpCas.php:38]
+5C95 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+5C95 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+5C95 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+5C95 .|    |    |    |    no user found [Client.php:1375]
+5C95 .|    |    |    <= false
+5C95 .|    |    |    no ticket found [Client.php:1258]
+5C95 .|    |    <= false
+5C95 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1092]
+5C95 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1396]
+5C95 .|    |    |    |    => CAS_Client::getURL() [Client.php:328]
+5C95 .|    |    |    |    |    Final URI: http://127.0.0.1:82/Test_Cas/phpCas.php [Client.php:3071]
+5C95 .|    |    |    |    <= 'http://127.0.0.1:82/Test_Cas/phpCas.php'
+5C95 .|    |    |    <= 'https://univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_Cas%2FphpCas.php'
+5C95 .|    |    |    Redirect to : https://univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_Cas%2FphpCas.php [Client.php:1402]
+5C95 .|    |    |    exit()
+5C95 .|    |    |    -
+5C95 .|    |    -
+5C95 .|    -
+E1A1 .START phpCAS-1.3.2 ****************** [CAS.php:450]
+E1A1 .=> phpCAS::client('2.0', 'auth.univ-lorraine.fr', 443, '/cas') [phpCas.php:26]
+E1A1 .|    => CAS_Client::__construct('2.0', false, 'auth.univ-lorraine.fr', 443, '/cas', true) [CAS.php:347]
+E1A1 .|    |    Starting a new session [Client.php:792]
+E1A1 .|    <= ''
+E1A1 .<= ''
+E1A1 .=> phpCAS::setNoCasServerValidation() [phpCas.php:35]
+E1A1 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+E1A1 .<= ''
+E1A1 .=> phpCAS::forceAuthentication() [phpCas.php:38]
+E1A1 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+E1A1 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+E1A1 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+E1A1 .|    |    |    |    no user found [Client.php:1375]
+E1A1 .|    |    |    <= false
+E1A1 .|    |    |    no ticket found [Client.php:1258]
+E1A1 .|    |    <= false
+E1A1 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1092]
+E1A1 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1396]
+E1A1 .|    |    |    |    => CAS_Client::getURL() [Client.php:328]
+E1A1 .|    |    |    |    |    Final URI: http://127.0.0.1:82/Test_Cas/phpCas.php [Client.php:3071]
+E1A1 .|    |    |    |    <= 'http://127.0.0.1:82/Test_Cas/phpCas.php'
+E1A1 .|    |    |    <= 'https://auth.univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_Cas%2FphpCas.php'
+E1A1 .|    |    |    Redirect to : https://auth.univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_Cas%2FphpCas.php [Client.php:1402]
+E1A1 .|    |    |    exit()
+E1A1 .|    |    |    -
+E1A1 .|    |    -
+E1A1 .|    -
+1455 .START phpCAS-1.3.2 ****************** [CAS.php:450]
+1455 .=> phpCAS::client('2.0', 'auth.univ-lorraine.fr', 443, '/cas') [phpCas.php:26]
+1455 .|    => CAS_Client::__construct('2.0', false, 'auth.univ-lorraine.fr', 443, '/cas', true) [CAS.php:347]
+1455 .|    |    Starting a new session [Client.php:792]
+1455 .|    <= ''
+1455 .<= ''
+1455 .=> phpCAS::setNoCasServerValidation() [phpCas.php:35]
+1455 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+1455 .<= ''
+1455 .=> phpCAS::forceAuthentication() [phpCas.php:38]
+1455 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+1455 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+1455 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+1455 .|    |    |    |    no user found [Client.php:1375]
+1455 .|    |    |    <= false
+1455 .|    |    |    no ticket found [Client.php:1258]
+1455 .|    |    <= false
+1455 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1092]
+1455 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1396]
+1455 .|    |    |    |    => CAS_Client::getURL() [Client.php:328]
+1455 .|    |    |    |    |    Final URI: http://127.0.0.1:82/Test_Cas/phpCas.php [Client.php:3071]
+1455 .|    |    |    |    <= 'http://127.0.0.1:82/Test_Cas/phpCas.php'
+1455 .|    |    |    <= 'https://auth.univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_Cas%2FphpCas.php'
+1455 .|    |    |    Redirect to : https://auth.univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_Cas%2FphpCas.php [Client.php:1402]
+1455 .|    |    |    exit()
+1455 .|    |    |    -
+1455 .|    |    -
+1455 .|    -
+078E .START phpCAS-1.3.2 ****************** [CAS.php:450]
+078E .=> phpCAS::client('2.0', 'auth.univ-lorraine.fr', 443, '/cas') [phpCas.php:26]
+078E .|    => CAS_Client::__construct('2.0', false, 'auth.univ-lorraine.fr', 443, '/cas', true) [CAS.php:347]
+078E .|    |    Starting a new session [Client.php:792]
+078E .|    <= ''
+078E .<= ''
+078E .=> phpCAS::setNoCasServerValidation() [phpCas.php:35]
+078E .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+078E .<= ''
+078E .=> phpCAS::forceAuthentication() [phpCas.php:38]
+078E .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+078E .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+078E .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+078E .|    |    |    |    no user found [Client.php:1375]
+078E .|    |    |    <= false
+078E .|    |    |    no ticket found [Client.php:1258]
+078E .|    |    <= false
+078E .|    |    => CAS_Client::redirectToCas(false) [Client.php:1092]
+078E .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1396]
+078E .|    |    |    |    => CAS_Client::getURL() [Client.php:328]
+078E .|    |    |    |    |    Final URI: http://127.0.0.1:82/Test_Cas/phpCas.php [Client.php:3071]
+078E .|    |    |    |    <= 'http://127.0.0.1:82/Test_Cas/phpCas.php'
+078E .|    |    |    <= 'https://auth.univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_Cas%2FphpCas.php'
+078E .|    |    |    Redirect to : https://auth.univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_Cas%2FphpCas.php [Client.php:1402]
+078E .|    |    |    exit()
+078E .|    |    |    -
+078E .|    |    -
+078E .|    -
+6D61 .START phpCAS-1.3.2 ****************** [CAS.php:450]
+6D61 .=> phpCAS::client('2.0', 'auth.univ-lorraine.fr', 443, '/cas') [Connexion.php:26]
+6D61 .|    => CAS_Client::__construct('2.0', false, 'auth.univ-lorraine.fr', 443, '/cas', true) [CAS.php:347]
+6D61 .|    |    Starting a new session [Client.php:792]
+6D61 .|    <= ''
+6D61 .<= ''
+6D61 .=> phpCAS::setNoCasServerValidation() [Connexion.php:35]
+6D61 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+6D61 .<= ''
+6D61 .=> phpCAS::forceAuthentication() [Connexion.php:38]
+6D61 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+6D61 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+6D61 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+6D61 .|    |    |    |    no user found [Client.php:1375]
+6D61 .|    |    |    <= false
+6D61 .|    |    |    no ticket found [Client.php:1258]
+6D61 .|    |    <= false
+6D61 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1092]
+6D61 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1396]
+6D61 .|    |    |    |    => CAS_Client::getURL() [Client.php:328]
+6D61 .|    |    |    |    |    Final URI: http://127.0.0.1:82/Test_Cas/Connexion.php [Client.php:3071]
+6D61 .|    |    |    |    <= 'http://127.0.0.1:82/Test_Cas/Connexion.php'
+6D61 .|    |    |    <= 'https://auth.univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_Cas%2FConnexion.php'
+6D61 .|    |    |    Redirect to : https://auth.univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_Cas%2FConnexion.php [Client.php:1402]
+6D61 .|    |    |    exit()
+6D61 .|    |    |    -
+6D61 .|    |    -
+6D61 .|    -
+5F89 .START phpCAS-1.3.2 ****************** [CAS.php:450]
+5F89 .=> phpCAS::client('2.0', 'auth.univ-lorraine.fr', 443, '/cas') [Connexion.php:26]
+5F89 .|    => CAS_Client::__construct('2.0', false, 'auth.univ-lorraine.fr', 443, '/cas', true) [CAS.php:347]
+5F89 .|    |    Starting a new session [Client.php:792]
+5F89 .|    <= ''
+5F89 .<= ''
+5F89 .=> phpCAS::setNoCasServerValidation() [Connexion.php:35]
+5F89 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+5F89 .<= ''
+5F89 .=> phpCAS::forceAuthentication() [Connexion.php:38]
+5F89 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+5F89 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+5F89 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+5F89 .|    |    |    |    no user found [Client.php:1375]
+5F89 .|    |    |    <= false
+5F89 .|    |    |    no ticket found [Client.php:1258]
+5F89 .|    |    <= false
+5F89 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1092]
+5F89 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1396]
+5F89 .|    |    |    |    => CAS_Client::getURL() [Client.php:328]
+5F89 .|    |    |    |    |    Final URI: http://127.0.0.1:82/Test_PhpCas/Connexion.php [Client.php:3071]
+5F89 .|    |    |    |    <= 'http://127.0.0.1:82/Test_PhpCas/Connexion.php'
+5F89 .|    |    |    <= 'https://auth.univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_PhpCas%2FConnexion.php'
+5F89 .|    |    |    Redirect to : https://auth.univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_PhpCas%2FConnexion.php [Client.php:1402]
+5F89 .|    |    |    exit()
+5F89 .|    |    |    -
+5F89 .|    |    -
+5F89 .|    -
+65A4 .START phpCAS-1.3.2 ****************** [CAS.php:450]
+65A4 .=> phpCAS::client('2.0', 'auth.univ-lorraine.fr', 443, '/cas') [Connexion.php:26]
+65A4 .|    => CAS_Client::__construct('2.0', false, 'auth.univ-lorraine.fr', 443, '/cas', true) [CAS.php:347]
+65A4 .|    |    Starting a new session [Client.php:792]
+65A4 .|    <= ''
+65A4 .<= ''
+65A4 .=> phpCAS::setNoCasServerValidation() [Connexion.php:35]
+65A4 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+65A4 .<= ''
+65A4 .=> phpCAS::forceAuthentication() [Connexion.php:38]
+65A4 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+65A4 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+65A4 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+65A4 .|    |    |    |    no user found [Client.php:1375]
+65A4 .|    |    |    <= false
+65A4 .|    |    |    no ticket found [Client.php:1258]
+65A4 .|    |    <= false
+65A4 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1092]
+65A4 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1396]
+65A4 .|    |    |    |    => CAS_Client::getURL() [Client.php:328]
+65A4 .|    |    |    |    |    Final URI: http://127.0.0.1:82/Test_PhpCas/Connexion.php [Client.php:3071]
+65A4 .|    |    |    |    <= 'http://127.0.0.1:82/Test_PhpCas/Connexion.php'
+65A4 .|    |    |    <= 'https://auth.univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_PhpCas%2FConnexion.php'
+65A4 .|    |    |    Redirect to : https://auth.univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_PhpCas%2FConnexion.php [Client.php:1402]
+65A4 .|    |    |    exit()
+65A4 .|    |    |    -
+65A4 .|    |    -
+65A4 .|    -
+BB20 .START phpCAS-1.3.2 ****************** [CAS.php:450]
+BB20 .=> phpCAS::client('2.0', 'auth.univ-lorraine.fr', 443, '/cas') [Connexion.php:26]
+BB20 .|    => CAS_Client::__construct('2.0', false, 'auth.univ-lorraine.fr', 443, '/cas', true) [CAS.php:347]
+BB20 .|    |    Starting a new session [Client.php:792]
+BB20 .|    <= ''
+BB20 .<= ''
+BB20 .=> phpCAS::setNoCasServerValidation() [Connexion.php:35]
+BB20 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+BB20 .<= ''
+BB20 .=> phpCAS::forceAuthentication() [Connexion.php:38]
+BB20 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+BB20 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+BB20 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+BB20 .|    |    |    |    no user found [Client.php:1375]
+BB20 .|    |    |    <= false
+BB20 .|    |    |    no ticket found [Client.php:1258]
+BB20 .|    |    <= false
+BB20 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1092]
+BB20 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1396]
+BB20 .|    |    |    |    => CAS_Client::getURL() [Client.php:328]
+BB20 .|    |    |    |    |    Final URI: http://127.0.0.1:82/Test_PhpCas/Connexion.php [Client.php:3071]
+BB20 .|    |    |    |    <= 'http://127.0.0.1:82/Test_PhpCas/Connexion.php'
+BB20 .|    |    |    <= 'https://auth.univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_PhpCas%2FConnexion.php'
+BB20 .|    |    |    Redirect to : https://auth.univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_PhpCas%2FConnexion.php [Client.php:1402]
+BB20 .|    |    |    exit()
+BB20 .|    |    |    -
+BB20 .|    |    -
+BB20 .|    -
+2D8D .START phpCAS-1.3.2 ****************** [CAS.php:450]
+2D8D .=> phpCAS::client('2.0', 'auth.univ-lorraine.fr', 443, '/cas') [Connexion.php:26]
+2D8D .|    => CAS_Client::__construct('2.0', false, 'auth.univ-lorraine.fr', 443, '/cas', true) [CAS.php:347]
+2D8D .|    |    Starting a new session [Client.php:792]
+2D8D .|    <= ''
+2D8D .<= ''
+2D8D .=> phpCAS::setNoCasServerValidation() [Connexion.php:35]
+2D8D .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+2D8D .<= ''
+2D8D .=> phpCAS::forceAuthentication() [Connexion.php:38]
+2D8D .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+2D8D .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+2D8D .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+2D8D .|    |    |    |    no user found [Client.php:1375]
+2D8D .|    |    |    <= false
+2D8D .|    |    |    no ticket found [Client.php:1258]
+2D8D .|    |    <= false
+2D8D .|    |    => CAS_Client::redirectToCas(false) [Client.php:1092]
+2D8D .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1396]
+2D8D .|    |    |    |    => CAS_Client::getURL() [Client.php:328]
+2D8D .|    |    |    |    |    Final URI: http://127.0.0.1:82/Test_PhpCas/Connexion.php [Client.php:3071]
+2D8D .|    |    |    |    <= 'http://127.0.0.1:82/Test_PhpCas/Connexion.php'
+2D8D .|    |    |    <= 'https://auth.univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_PhpCas%2FConnexion.php'
+2D8D .|    |    |    Redirect to : https://auth.univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_PhpCas%2FConnexion.php [Client.php:1402]
+2D8D .|    |    |    exit()
+2D8D .|    |    |    -
+2D8D .|    |    -
+2D8D .|    -
+33D9 .START phpCAS-1.3.2 ****************** [CAS.php:450]
+33D9 .=> phpCAS::client('2.0', 'auth.univ-lorraine.fr', 443, '/cas') [Connexion.php:26]
+33D9 .|    => CAS_Client::__construct('2.0', false, 'auth.univ-lorraine.fr', 443, '/cas', true) [CAS.php:347]
+33D9 .|    |    Starting a new session [Client.php:792]
+33D9 .|    <= ''
+33D9 .<= ''
+33D9 .=> phpCAS::setNoCasServerValidation() [Connexion.php:35]
+33D9 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+33D9 .<= ''
+33D9 .=> phpCAS::forceAuthentication() [Connexion.php:38]
+33D9 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+33D9 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+33D9 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+33D9 .|    |    |    |    no user found [Client.php:1375]
+33D9 .|    |    |    <= false
+33D9 .|    |    |    no ticket found [Client.php:1258]
+33D9 .|    |    <= false
+33D9 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1092]
+33D9 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1396]
+33D9 .|    |    |    |    => CAS_Client::getURL() [Client.php:328]
+33D9 .|    |    |    |    |    Final URI: http://127.0.0.1:82/Test_PhpCas/Connexion.php [Client.php:3071]
+33D9 .|    |    |    |    <= 'http://127.0.0.1:82/Test_PhpCas/Connexion.php'
+33D9 .|    |    |    <= 'https://auth.univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_PhpCas%2FConnexion.php'
+33D9 .|    |    |    Redirect to : https://auth.univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_PhpCas%2FConnexion.php [Client.php:1402]
+33D9 .|    |    |    exit()
+33D9 .|    |    |    -
+33D9 .|    |    -
+33D9 .|    -
+FE1F .START phpCAS-1.3.2 ****************** [CAS.php:450]
+FE1F .=> phpCAS::client('2.0', 'auth.univ-lorraine.fr', 443, '/cas') [Connexion.php:26]
+FE1F .|    => CAS_Client::__construct('2.0', false, 'auth.univ-lorraine.fr', 443, '/cas', true) [CAS.php:347]
+FE1F .|    |    Starting a new session [Client.php:792]
+FE1F .|    <= ''
+FE1F .<= ''
+FE1F .=> phpCAS::setNoCasServerValidation() [Connexion.php:35]
+FE1F .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+FE1F .<= ''
+FE1F .=> phpCAS::forceAuthentication() [Connexion.php:38]
+FE1F .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+FE1F .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+FE1F .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+FE1F .|    |    |    |    no user found [Client.php:1375]
+FE1F .|    |    |    <= false
+FE1F .|    |    |    no ticket found [Client.php:1258]
+FE1F .|    |    <= false
+FE1F .|    |    => CAS_Client::redirectToCas(false) [Client.php:1092]
+FE1F .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1396]
+FE1F .|    |    |    |    => CAS_Client::getURL() [Client.php:328]
+FE1F .|    |    |    |    |    Final URI: http://127.0.0.1:82/Test_PhpCas/Connexion.php [Client.php:3071]
+FE1F .|    |    |    |    <= 'http://127.0.0.1:82/Test_PhpCas/Connexion.php'
+FE1F .|    |    |    <= 'https://auth.univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_PhpCas%2FConnexion.php'
+FE1F .|    |    |    Redirect to : https://auth.univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_PhpCas%2FConnexion.php [Client.php:1402]
+FE1F .|    |    |    exit()
+FE1F .|    |    |    -
+FE1F .|    |    -
+FE1F .|    -
+2F77 .START phpCAS-1.3.2 ****************** [CAS.php:450]
+2F77 .=> phpCAS::client('2.0', 'auth.univ-lorraine.fr', 443, '/cas') [Connexion.php:26]
+2F77 .|    => CAS_Client::__construct('2.0', false, 'auth.univ-lorraine.fr', 443, '/cas', true) [CAS.php:347]
+2F77 .|    |    Starting a new session [Client.php:792]
+2F77 .|    <= ''
+2F77 .<= ''
+2F77 .=> phpCAS::setNoCasServerValidation() [Connexion.php:35]
+2F77 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+2F77 .<= ''
+2F77 .=> phpCAS::forceAuthentication() [Connexion.php:38]
+2F77 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+2F77 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+2F77 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+2F77 .|    |    |    |    no user found [Client.php:1375]
+2F77 .|    |    |    <= false
+2F77 .|    |    |    no ticket found [Client.php:1258]
+2F77 .|    |    <= false
+2F77 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1092]
+2F77 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1396]
+2F77 .|    |    |    |    => CAS_Client::getURL() [Client.php:328]
+2F77 .|    |    |    |    |    Final URI: http://127.0.0.1:82/Test_PhpCas/Connexion.php [Client.php:3071]
+2F77 .|    |    |    |    <= 'http://127.0.0.1:82/Test_PhpCas/Connexion.php'
+2F77 .|    |    |    <= 'https://auth.univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_PhpCas%2FConnexion.php'
+2F77 .|    |    |    Redirect to : https://auth.univ-lorraine.fr/cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_PhpCas%2FConnexion.php [Client.php:1402]
+2F77 .|    |    |    exit()
+2F77 .|    |    |    -
+2F77 .|    |    -
+2F77 .|    -
+8EB9 .START phpCAS-1.3.2 ****************** [CAS.php:450]
+8EB9 .=> phpCAS::client('2.0', ' https://auth.univ-lorraine.fr/cas/', 443, '/cas') [Connexion.php:26]
+8EB9 .|    => CAS_Client::__construct('2.0', false, ' https://auth.univ-lorraine.fr/cas/', 443, '/cas', true) [CAS.php:347]
+8EB9 .|    |    Starting a new session [Client.php:792]
+8EB9 .|    <= ''
+8EB9 .<= ''
+8EB9 .=> phpCAS::setNoCasServerValidation() [Connexion.php:35]
+8EB9 .|    You have configured no validation of the legitimacy of the cas server. This is not recommended for production use. [CAS.php:1669]
+8EB9 .<= ''
+8EB9 .=> phpCAS::forceAuthentication() [Connexion.php:38]
+8EB9 .|    => CAS_Client::forceAuthentication() [CAS.php:1101]
+8EB9 .|    |    => CAS_Client::isAuthenticated() [Client.php:1083]
+8EB9 .|    |    |    => CAS_Client::_wasPreviouslyAuthenticated() [Client.php:1189]
+8EB9 .|    |    |    |    no user found [Client.php:1375]
+8EB9 .|    |    |    <= false
+8EB9 .|    |    |    no ticket found [Client.php:1258]
+8EB9 .|    |    <= false
+8EB9 .|    |    => CAS_Client::redirectToCas(false) [Client.php:1092]
+8EB9 .|    |    |    => CAS_Client::getServerLoginURL(false, false) [Client.php:1396]
+8EB9 .|    |    |    |    => CAS_Client::getURL() [Client.php:328]
+8EB9 .|    |    |    |    |    Final URI: http://127.0.0.1:82/Test_PhpCas/Connexion.php [Client.php:3071]
+8EB9 .|    |    |    |    <= 'http://127.0.0.1:82/Test_PhpCas/Connexion.php'
+8EB9 .|    |    |    <= 'https:// https://auth.univ-lorraine.fr/cas//cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_PhpCas%2FConnexion.php'
+8EB9 .|    |    |    Redirect to : https:// https://auth.univ-lorraine.fr/cas//cas/login?service=http%3A%2F%2F127.0.0.1%3A82%2FTest_PhpCas%2FConnexion.php [Client.php:1402]
+8EB9 .|    |    |    exit()
+8EB9 .|    |    |    -
+8EB9 .|    |    -
+8EB9 .|    -

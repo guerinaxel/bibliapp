@@ -1,0 +1,25 @@
+{% extends "main.html.twig" %}
+{% block content %}
+<div class="panel">
+<h2>Importation de livres à partir d'un fichier</h2>
+<br />
+<form class = "row col-md-12 centered"role = "form" method="post" enctype="multipart/form-data" action="{{url_base}}admin/import">
+	<input type="file" id="fichier_import" name="fichier_import" > </input>
+	<br />
+	<button class="btn btn-primary" id="importer">Importer</button>
+<br><br>
+</form>
+</div>
+<div class="panel">
+<h2>Exportation des livres</h2>
+<form class = "row col-md-12 centered"role = "form" method="post" enctype="multipart/form-data" action="{{url_base}}admin/export">
+	<select name="select">
+	    <option value="CSV">CSV</option>
+	    <option value="XML">XML</option>
+	    <option value="JSON">JSON</option>
+	</select>
+	<br /><br/>
+	<button class="btn btn-primary" id="importer">Exporter</button>
+</form>
+</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "main.html.twig" %}
+{% block content %}
+
+<section>
+
+	<h1>Inscription</h1>
+	
+	<p>Dans le cadre de votre première connexion à l'application BibliApp, il est nécessaire de nous renseigner les
+	informations ci-dessous.<br/>
+	Veillez à ce que l'email saisie soit valide, afin que nous puissions vous contacter en cas de problème.</p>
+	
+	<form method="post" action="{{url_base}}inscription">
+		<fieldset>
+			<input type="text" id="login" readonly value="{{login}}" name="login" value="{{login}}" ></input>
+			<input type="text" id="nom" name="nom" value="" autocomplete="off" placeholder="Nom" required></input>
+			<input type="email" id="email" name="email" value="" autocomplete="off" placeholder="E-mail" required></input>
+		</fieldset>
+
+		<button>M'inscrire</button>
+
+	</form>
+
+	
+</section>
+
+{% endblock %}

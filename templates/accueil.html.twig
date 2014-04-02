@@ -1,0 +1,14 @@
+{% extends "main.html.twig" %}
+{% block content %}
+
+<section>
+	<div class="col-md-12">
+		<p><a href="{{url_base}}">Home</a> > Nouveauté</p>
+	</div>	
+	<div class="col-md-12">
+		<h1>Les nouveautés :</h1>
+	</div>
+{% include 'affLivre.html.twig' %}
+</section>
+
+{% endblock %}

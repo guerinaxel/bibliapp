@@ -1,0 +1,49 @@
+{% extends "main.html.twig" %}
+{% block content %}
+<h1>Suivi des emprunts</h1>
+<br />
+<form role = "form" method="post" enctype="multipart/form-data" action="{{url_base}}admin/relanceDate">	
+	<button class="col-md-4 btn btn-primary">Relancer les emprunts antérieur à la date :</button>
+	<div class="col-md-2">
+		<input type="date" class="form-control" placeholder="jj/mm/AAAA" id="dateRelance" name="dateRelance">
+	</div>	
+</form>
+<form role = "form" method="post" enctype="multipart/form-data" action="{{url_base}}admin/relance">	
+	<button class="btn btn-primary" id="relance">Relancer les emprunts cochés</button>
+	<br><br>
+{% if emprunts|length > 0 %}
+<table class="table">
+	<tr>
+		<th >Titre</th>
+		<th >ISBN</th> 
+		<th> Discipline </th>
+		<th>Nom de l'emprunteur</th>
+		<th>Prénom de l'emprunteur</th>
+		<th >Date d'emprunt</th>
+		<th>Relancer l'emprunt</th>
+	</tr>
+	{% for i in range(0, emprunts|length -1) %}		
+				<tr>
+					<td>{{emprunts[i]["livre"].titre}}</td> 
+					<td>{{emprunts[i]["livre"].isbn}}</td> 
+					<td>{{emprunts[i]["livre"]["discipline"].nom}}</td> 
+					<td>{{emprunts[i]["users"].nom}}</td>
+					<td>{{emprunts[i]["users"].prenom}}</td>				
+					<td>{{emprunts[i].dateEmprunt}}</td>
+			<td>			
+				<div class="checkbox">
+					<input type="checkbox" name="{{emprunts[i].idEmprunt}}" id = "{{emprunts[i].idEmprunt}}"> </input>
+				</div>
+			</td>
+			</div>
+			
+	{% endfor %}
+</table> 
+
+</form>
+{% else %}
+	<h3> Aucun emprunt n'a été trouvé.</h3>
+	{% endif %}
+</div>
+
+{% endblock %}

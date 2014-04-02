@@ -1,0 +1,61 @@
+{% extends "main.html.twig" %}
+{% block content %}
+
+<section>
+		<article>
+				<div class="col-md-12">
+					<p><a href="{{url_base}}">Home</a> > Détail</p>
+				</div>	
+				<div class="col-md-12">
+					<h1>Les nouveautés :</h1>
+				</div>
+			<div class="col-md-6">
+				<div class="col-md-8">
+					<img src='../../upload/{{livre.couverture}}' class=" thumbnail img-responsive"/>
+				</div>
+				<div class="col-md-6 ">
+					<p>Editeur : {% if livre["edition"].nom == "" %} Non renseigné {% else %} {{livre["edition"].nom}} {% endif %}</p>
+					<p>Auteur : {% if livre.auteur == "" %} Non renseigné {% else %} {{livre.auteur}} {% endif %}</p>
+					<p>ISBN : {% if livre.isbn == "" %} Non renseigné {% else %} {{livre.isbn}} {% endif %}</p>
+					<p>Mots-clés : 
+					{% for mot in mots %}
+					<a href="{{url_base}}recherche?&text={{mot.libelle}}&tri=1">{{mot.libelle}}</a>,
+					{% endfor %}
+					</p>
+				</div>
+			</div>
+			
+			<div class="col-md-6">
+				{% if user[0].droit == "A" %}
+						<a href="{{url_base}}admin/livre/{{livre.idLivre}}" class="btn btn-default btn-lg"> <span class="glyphicon glyphicon-pencil"></span> Modifier</a>
+						<a href="{{url_base}}admin/livre/suppr/{{livre.idLivre}}" class="btn btn-default btn-lg"> <span class="glyphicon glyphicon-remove"></span> Supprimer</a>
+				{% endif %}
+				<p><h3>{{livre.titre}}</h3></p> <br>
+				<p><b>Discipline : </b>
+					{% if livre["discipline"].nom == "" %}  
+						Pas de discipline 
+					{% else %} 
+						<a href="{{url_base}}rechercheAv?discipline={{livre['discipline'].idDiscipline}}&tri=1"> {{livre["discipline"].nom}}</a> 
+					{% endif %}
+				</p>				
+				<p><h5><b>Description :</b></h5>{% if livre.description == "" %} Pas de description {% else %} {{livre.description}} {% endif %}</p>
+				
+				{% if dispo[0] == "null" %}
+				<form method="post" action="{{url_base}}emprunt/{{livre.idLivre}}">
+					<input type="submit" value="Emprunter" class="btn btn-success"></input>
+				</form>
+				{% elseif dispo[0].idUser != user[0].idUser %}					
+				<button id='indisponible' class="btn btn-danger">Indisponible</button>
+				{% else %}
+				<form method="post" action="{{url_base}}retour/{{livre.idLivre}}">
+					<input type="submit" value="Rendre" class="btn btn-primary"></input>
+				</form>
+				{% endif %}
+				
+			</div>
+			
+		</article>
+
+</section>
+
+{% endblock %}

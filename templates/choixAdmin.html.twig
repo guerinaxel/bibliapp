@@ -1,0 +1,11 @@
+{% extends "main.html.twig" %}
+{% block content %}
+
+<section class="col-md-12">
+<a href="{{url_base}}admin/recapitulatif"><div class="col-md-6 panel text-center">Ajouter un livre</div></a>
+<a href="{{url_base}}admin/suivi"><div class="col-md-6 panel text-center">Visualisation des emprunts</div></a>
+<a href="{{url_base}}admin/importation"><div class="col-md-6 panel text-center">Importer/exporter une liste</div></a>
+<a href="{{url_base}}admin/statistiques"><div class="col-md-6 panel text-center">Statistiques</div></a>
+</section>
+
+{% endblock %}

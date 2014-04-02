@@ -1,0 +1,33 @@
+{% extends "main.html.twig" %}
+{% block content %}
+
+<section>
+	<div class="col-md-12">
+		<p><a href="{{url_base}}">Home </a> > Recherche</p>
+	</div>	
+
+	<article class="col-md-12">
+		<div class=" panel col-md-2">
+			<form method="get" action="{{url_base}}rechercheAv" name="rechAv">
+				<input type="text" class="col-md-12" placeholder="Titre" id="Titre" name="titre"/>
+				<input type="text" class="col-md-12" placeholder="Auteur" id="Auteur" name="auteur"/>
+				<input type="text" class="col-md-12" placeholder="Edition" id="Edition" name="edition"/>
+				<select name="discipline" class="col-md-12">
+					<option value="" selected="selected">Discipline</option>
+					{% for option in tabOptions %}
+					<option value="{{option.idDiscipline}}" >{{option.nom}}</option>
+					{% endfor %}
+				</select>
+				<input type="text" class="col-md-12" placeholder="Mot Clé" id="Motclé" name="mots"/>
+				<input type="text" class="col-md-12" placeholder="ISBN" id="ISBN" name="isbn"/>
+				<input type="submit" class="col-md-12" value="Recherche" id="Recherche"/>
+			</form>
+		</div>
+		<div class="col-md-10">
+	{% include 'affLivre.html.twig' %}
+		</div>
+	</article>
+</section>
+
+
+{% endblock %}

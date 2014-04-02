@@ -1,0 +1,37 @@
+{% extends "main.html.twig" %}
+{% block content %}
+<section>
+
+	<h1>Modification</h1>
+	<form method="post" enctype="multipart/form-data" action="{{url_base}}admin/modification/{{livre.idLivre}}">
+	<div class="col-md-5">
+		<fieldset>
+			<legend>Informations</legend>
+			<label>ISBN</label> : {{livre.isbn}}<br/>
+			<label>Titre</label> : {{livre.titre}}<br/>
+			<label>Auteur</label> <input type="text" id="auteur" name="auteur" value="{{livre.auteur}}" autocomplete="off" placeholder="Auteur"></input><br/>
+			<label>Langue</label> <input type="text" id="langue" name="langue" value="{{livre.langue}}" autocomplete="off" placeholder="Langue"></input><br/>
+			<label>Publication</label> <input type="text" id="publication" name="publication" value="{{livre.annee}}" autocomplete="off" placeholder="Publication"></input><br/>
+			<input type="hidden"  name="login"  value="{{user[0].nom}}">
+			
+			Note : Pas de changements sur les mots clés !
+
+		</fieldset>
+	</div>
+	<div class="col-md-7">
+		<fieldset>
+			<legend>Résumé</legend>
+			<textarea id="description" name="resume">{{livre.description}}</textarea>
+		</fieldset>
+	
+		<fieldset>
+			<legend>Couverture</legend>
+			<label>Importer une image (.jpg, .jpeg ou .gif)</label><input id="fichier" type="file" name="fichier"><br/>
+		</fieldset>
+	
+		<button>Enregistrer le document</button>
+	</div>
+	</form>
+</section>
+
+{% endblock %}
