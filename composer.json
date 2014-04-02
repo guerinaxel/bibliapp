@@ -1,0 +1,23 @@
+{
+    "require": {
+        "slim/slim": "2.*",
+        "twig/twig": "1.*",
+        "illuminate/database": "*" ,
+        "passwordlib/passwordlib": "dev-master",
+        "phpmailer/phpmailer": "dev-master"
+    	
+    },
+
+
+	"autoload": {
+	"psr-0": {
+	"controller\\":"",
+	"view\\":"",
+	"model\\":"",
+	"templates\\":""
+		}
+	}
+}
+
+
+  
