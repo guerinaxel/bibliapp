@@ -280,45 +280,34 @@ class AdminController extends Controller {
 
     }
 
-    public function import(  array $post ) {
+   public function import(  array $post ) {
         // importation de livre à partir d'un fichier
 		$filename = basename($_FILES['fichier_import']['name']); 
 		$extension=strrchr($filename,'.');   
 		if (($handle = fopen($_FILES['fichier_import']['tmp_name'], "r")) !== FALSE) {
 			if ( $extension == '.csv')
 			{
-	    		while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
-	    		$isbn = \model\Livre::where('isbn', '=', $data[0])->get();
-					if(!isset($isbn[0])){	
-						// //Vérification de l'édition
-						$edition = \model\Edition::where('nom', '=', $data[5])->get();
+	    		while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+	    			if ($data[1]!= 'isbn')
+	    			{
+		    			$isbn = \model\Livre::where('isbn', '=', $data[1])->get();
+						if(!isset($isbn[0])){
+						var_dump($data);	
 
-						//Si elle existe alors
-						if(isset($edition[0])){
-							$idEdition = $edition[0]->idEdition;
-						}
-						//Si elle n'existe pas alors créer l'édition
-						Else{
-							$newEdition = new \model\Edition();
-							$newEdition->nom = $data[5];
-							$newEdition->save();
-							$tempEdition = \model\Edition::where('nom', '=', $data[5])->get();
-							$idEdition = $tempEdition[0]->idEdition;
-						}
-			 			// Enregistrement du livre
-						$Livre = new \model\Livre();
-						$Livre->isbn = htmlspecialchars($data[1]);
-						$Livre->titre =  htmlspecialchars($data[2]);
-						$Livre->description =  htmlspecialchars($data[3]);
-						$Livre->idEdition = $idEdition;
-						$Livre->auteur =  htmlspecialchars($data[4]);
-						$Livre->idEdition = $idEdition;
-						$Livre->langue =  htmlspecialchars($data[6]);
-						$Livre->annee = htmlspecialchars($data[7]);
-						$Livre->dateAjout = date("Y-m-d");  ;
-						$Livre->couverture = "defaut";
-			    		$Livre->save();
-		    		}
+				 			// Enregistrement du livre
+							$Livre = new \model\Livre();
+							$Livre->isbn = htmlspecialchars($data[1]);
+							$Livre->titre =  htmlspecialchars($data[2]);
+							$Livre->description =  htmlspecialchars($data[3]);
+							$Livre->idEdition = htmlspecialchars($data[5]);
+							$Livre->auteur =  htmlspecialchars($data[4]);
+							$Livre->langue =  htmlspecialchars($data[6]);
+							$Livre->annee = htmlspecialchars($data[7]);
+							$Livre->dateAjout = date("Y-m-d");  ;
+							$Livre->couverture = "defaut";
+				    		$Livre->save();
+			    		}
+			    	}	
 				}
 			}
 			else if ( $extension == '.xml'){
@@ -353,7 +342,6 @@ class AdminController extends Controller {
     	}	
     fclose($handle);
 	}
-
 		
 	public function export( array $post ) {
 		// Exportation de la table livre

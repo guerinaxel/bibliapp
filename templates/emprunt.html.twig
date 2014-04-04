@@ -1,5 +1,8 @@
 {% extends "main.html.twig" %}
 {% block content %}
+<div class="col-md-12">
+	<p><a href="{{url_base}}">Home</a> > <a href="{{url_base}}/admin">Administration</a> > Emprunt</p>
+</div>
 <h1>Suivi des emprunts</h1>
 <br />
 <form role = "form" method="post" enctype="multipart/form-data" action="{{url_base}}admin/relanceDate">	

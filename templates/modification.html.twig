@@ -2,6 +2,10 @@
 {% block content %}
 <section>
 
+	<div class="col-md-12">
+		<p><a href="{{url_base}}">Home</a> > <a href="{{url_base}}livre/id={{livre.idLivre}}">Détail</a> > Modification</p>
+	</div>
+	
 	<h1>Modification</h1>
 	<form method="post" enctype="multipart/form-data" action="{{url_base}}admin/modification/{{livre.idLivre}}">
 	<div class="col-md-5">
