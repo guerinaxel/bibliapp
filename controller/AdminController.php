@@ -291,8 +291,7 @@ class AdminController extends Controller {
 	    			if ($data[1]!= 'isbn')
 	    			{
 		    			$isbn = \model\Livre::where('isbn', '=', $data[1])->get();
-						if(!isset($isbn[0])){
-						var_dump($data);	
+						if(!isset($isbn[0])){	
 
 				 			// Enregistrement du livre
 							$Livre = new \model\Livre();
@@ -345,8 +344,11 @@ class AdminController extends Controller {
 		
 	public function export( array $post ) {
 		// Exportation de la table livre
+		$livres = \model\Livre::all() ;
+			if (empty($livres[0])) {
+				exit('Aucun livre n\'est présent dans la base de donnée');
+			}
 		if ($post[0]['select'] == 'CSV'){
-			$livres = \model\Livre::all() ;
 			$filename = sys_get_temp_dir().'/livre.csv';
 			//Récupèration du nom des colonnes de la table
 			$tab_attribute = array_keys($livres[0]['attributes']);
@@ -428,7 +430,8 @@ class AdminController extends Controller {
     public function relance ( array $request ) {
     	//on récupère l'id des emprunts à relancer
   		$tab_id = array_keys($request[0],'on');
-  		$this->mail($tab_id);
+  		if(!empty($tab_id))
+  			$this->mail($tab_id);
 		  
 
 
@@ -437,20 +440,36 @@ class AdminController extends Controller {
     public function relanceDate ( array $request ) {
 	    	//récuperation des emprunts
 		$dateRelance = htmlspecialchars($request[0]['dateRelance']);
-    	if (!empty($dateRelance)){	
-			$date = new \DateTime($dateRelance);
-			//conversion au format datetime
-			$date = $date->format('Y-d-m H:i:s');
+    	if (!empty($dateRelance)){
+    		//vérification du format de la date	
+    		$format = 'd/m/Y';
+			$validation_Date = $this->validateDate($format,$dateRelance);
+			if(!$validation_Date){
+    			exit('date incorrect');
+ 			}
+ 			//conversion format de mysql
+    		$date = \DateTime::createFromFormat($format, $dateRelance);
+    		$date = $date->format('Y-m-d H:i:s') ;
+    		
 			$emprunt = \model\Emprunt::whereRaw('dateEmprunt <="'.$date.'"')->get();
-	    	for ($i=0; $i <count($emprunt) ; $i++) { 	
-	    		$tab[] = $emprunt[$i]['idEmprunt'];
-	    	}
+	    	if(!empty($emprunt[0])){
+	    		for ($i=0; $i <count($emprunt) ; $i++) { 	
+	    			$tab[] = $emprunt[$i]['idEmprunt'];
+	    		}	
 	   		$this->mail($tab);
+	    	}
+	    	else echo 'aucun emprunt à relancer';
     	}
 
 	}
 
-	public function mail ( array $request ) {
+
+	private function validateDate($format = 'd/m/Y',$date){
+    	$d = \DateTime::createFromFormat($format, $date);
+    	return $d && $d->format($format) == $date;
+	}
+	
+	private function mail ( array $request ) {
 		$tab_id = $request;
 		//Création et envoi des emails
   		date_default_timezone_set('Europe/Paris');
