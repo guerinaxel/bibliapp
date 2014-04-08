@@ -6,7 +6,7 @@ require'vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
 $app = new \Slim\Slim();
 
 //Module connexion -----------------------------------------------------------
-/*
+
 require_once 'config.php';
 require_once $phpcas_path . '/CAS.php';
 phpCAS::setDebug();
@@ -19,23 +19,22 @@ if (isset($_REQUEST['logout'])) {
 }
 
 $user = model\Users::where('nom', '=', phpCAS::getUser())->get();
-	
-if (phpCAS::getUser() != ""){   //Si phpCAS::getUser() est remplie Alors
-	if (phpCAS::getUser(){strlen(phpCAS::getUser())-1 == "u"} ){ //Si l'utilisateur est un élève alors (le dernier caractère est "u")
-		phpCAS::logout(); //logout
-	}
-		$login = phpCAS::getUser();
-}
-*/
-
-//Admettons ici que phpCAS::getUser() = "doan2u"
-$login = "toto"; //Login de l'utilisateur connecté mis dans une variable pour utilisation dans l'appli
-$user = model\Users::where('nom', '=', $login)->get();//Temporaire
-
+//Ajout du nombre d'emprunts de l'utilisateur
 if (isset($user[0])){
 	$nbEmprunt = model\Emprunt::whereRaw('idUser = '.$user[0]->idUser.' and dateRetour is null')->count();
 	$user[0]->nbEmprunt = $nbEmprunt;
 }
+	
+if (phpCAS::getUser() != ""){   //Si phpCAS::getUser() est remplie Alors
+	/*if (phpCAS::getUser(){strlen(phpCAS::getUser())-1 == "u"){ //Si l'utilisateur est un élève alors (le dernier caractère est "u")
+		phpCAS::logout(); //logout
+	}*/
+		$login = phpCAS::getUser();
+}
+
+//Admettons ici que phpCAS::getUser() = "doan2u"
+//$login = "toto"; Login de l'utilisateur connecté mis dans une variable pour utilisation dans l'appli
+//user = model\Users::where('nom', '=', $login)->get();Temporaire
 
 //IMPORTANT !!!! POUR SE DECONNECTER => Ajouter "?logout" dans l'url
 
